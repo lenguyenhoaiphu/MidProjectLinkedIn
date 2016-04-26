@@ -1,0 +1,48 @@
+"PROFILE":
+{
+	"MyName":"Lê Nguyễn Hoài Phú",
+	"Headline":"For me, Nothing impossible",
+	"Country":"HoChiMinh - VietNam",
+	"MyWork":"Information technology",
+	"Contact":"lenguyenhoaiphu@gmail.com"
+},
+
+"SUMMARY":
+{
+	"Summary1":"Junior at  University of Science",
+	"Summary2":"Studying about Software Engineering",
+	"Summary3":"Hobies: playing games,watching movie..."
+},
+
+"EXPERIENCE":
+{
+	"Experience1":"Graduating next year",
+	"Experience2":"Work partime in restaurant"
+},
+
+"PROJECT":
+{
+	"Project1":"MyPaint",
+	"Project2":"Game Caro"
+},
+
+"SKILLS":
+{
+	"skill1":"Programing language: C, C++, C#, Java, HTMT CSS",
+	"skill2":"Teamwork, softskills, English"
+},
+
+"EDUCATION":
+{
+	"education1":"University of Sciences, Ho Chi Minh City"
+},
+
+"IMAGES":
+{
+	"Avatar":"images/avatar.jpg",
+	"experience":"images/experience.png",
+	"project":"images/project.png",
+	"skill":"images/skill.png",
+	"summary":"images/summary.png",
+	"education":"images/education.png"
+}
