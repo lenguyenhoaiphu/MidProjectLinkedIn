@@ -9,25 +9,93 @@
 		<link href="css/style.css" rel="stylesheet">
 	</head>
 	<body style="background-color: #c0c0c0">
-		<div ng-app="myApp" style="width: 960px; margin: 50px auto; background-color: white">
+		<div ng-app="myApp" style="width: 1000px; margin: 40px auto; background-color: white">
 			<div ng-controller="myController">
 				<div class="row container" >
-					<h5 class=" col-sm-12">{{myData.PROFILE.Headline}}</h5>
+					<h3 style="background-color: #808080;color:	#00FF00; width: 1000px;" class="col-sm-12 text-center">{{myData.PROFILE.Headline}}</h5>
 				</div>
-				<div class="row container">
+				</br></br>
+				<div class="row container" style="margin-left:20px;">
 					<image class="col-sm-3" src="{{myData.IMAGES.Avatar}}">
 					<div class="col-sm-9" style="margin-left: 10px margin-top:10px ;">
-						<h3> <strong>{{myData.PROFILE.MyName}}</strong></h3>
+						<h2> <strong>{{myData.PROFILE.MyName}}</strong></h2>
 						<div>Job: {{myData.PROFILE.MyWork}}</div>
+						<div>Education: {{myData.PROFILE.Education}}</div> 
 						<div>Email: {{myData.PROFILE.Contact}}</div>
-						<div>Nationality: {{myData.PROFILE.MyWork}}</div>
-						<div>Country: {{myData.PROFILE.Country}}</div>
+						<div>Phone: {{myData.PROFILE.Phone}}</div>
+						<div>Nationality: {{myData.PROFILE.Country}}</div>
 					</div>
 				</div>
 				<div class="clearfix"></div>
-				<
 				
+				<div class="row container" style="margin-left:20px;">
+					<h3 class="col-sm-12"><strong>Background</strong></h3>
+				</div>
+				</br></br>
+				<div class="row container" style="margin-left:20px;">
+					<image style="display: inline; width: 30px;height: 30px; margin-left: 60px;" src="{{myData.IMAGES.summary}}">
+					<span><strong>Summary</strong></span>
+					</br></br>
+					<ul style="margin-left:80px;">
+						<li>{{myData.SUMMARY.Summary1}}</li>
+						<li>{{myData.SUMMARY.Summary2}}</li>
+						<li>{{myData.SUMMARY.Summary3}}</li>
+					</ul>
+				</div>
+				<div class="clearfix"></div>
+				
+				<hr/>
+				
+				<div class="row container" style="margin-left:20px;">
+					<image style="display: inline; width: 30px;height: 30px; margin-left: 60px" src="{{myData.IMAGES.experience}}">
+					<span><strong>Experience</strong></span>
+					</br></br>
+					<ul style="margin-left:80px;">
+						<li>{{myData.EXPERIENCE.Experience1}}</li>
+						<li>{{myData.EXPERIENCE.Experience2}}</li>
+					</ul>
+				</div>
+				<div class="clearfix"></div>
+				
+				<hr/>
+				
+				<div class="row container" style="margin-left:20px;">
+					<image style="display: inline; width: 30px;height: 30px; margin-left: 60px" src="{{myData.IMAGES.project}}">
+					<span><strong>Project</strong></span>
+					</br></br>
+					<ul style="margin-left:80px;">
+						<li>{{myData.PROJECT.Project1}}</li>
+						<li>{{myData.PROJECT.Project2}}</li>
+					</ul>
+				</div>
+				<div class="clearfix"></div>
+				
+				<hr/>
+				
+				<div class="row container" style="margin-left:20px;">
+					<image style="display: inline; width: 30px;height: 30px; margin-left: 60px" src="{{myData.IMAGES.skill}}">
+					<span><strong>Skills</strong></span>
+					</br></br>
+					<ul style="margin-left:80px;">
+						<li>{{myData.SKILLS.skill1}}</li>
+						<li>{{myData.SKILLS.skill2}}</li>
+					</ul>
+				</div>
+				<div class="clearfix"></div>
+				
+				<hr/>
+				
+				<div class="row container" style="margin-left:20px;">
+					<image style="display: inline; width: 30px;height: 30px; margin-left: 60px" src="{{myData.IMAGES.education}}">
+					<span><strong>Education</strong></span>
+					</br></br>
+					<ul style="margin-left:80px;">
+						<li>{{myData.EDUCATION.education1}}</li>
+					</ul>
+				</div>
+				<div class="clearfix"></div>
 			</div>
+	    </div>
 		
 	</body>
 </html>
