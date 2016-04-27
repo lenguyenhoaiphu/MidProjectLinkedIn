@@ -15,23 +15,40 @@
 					<h3 style="background-color: #808080;color:	#00FF00; width: 1000px;" class="col-sm-12 text-center">{{myData.PROFILE.Headline}}</h5>
 				</div>
 				</br></br>
-				<div class="row container" style="margin-left:20px;">
-					<image class="col-sm-3" src="{{myData.IMAGES.Avatar}}">
-					<div class="col-sm-9" style="margin-left: 10px margin-top:10px ;">
+				<div class="row container" style="margin-left:20px;margin-bottom:20px;">
+					<image class="col-sm-4" style ="height: 250px; width:250px;" src="{{myData.IMAGES.Avatar}}">
+					<div class="col-sm-8" style="margin-left: 10px margin-top:10px; margin-bottom=10px;">
 						<h2> <strong>{{myData.PROFILE.MyName}}</strong></h2>
-						<div>Job: {{myData.PROFILE.MyWork}}</div>
-						<div>Education: {{myData.PROFILE.Education}}</div> 
-						<div>Email: {{myData.PROFILE.Contact}}</div>
-						<div>Phone: {{myData.PROFILE.Phone}}</div>
-						<div>Nationality: {{myData.PROFILE.Country}}</div>
+						<div class ="row">
+							<div class="col-sm-2 text-muted">Job: </div>
+							<div class="col-sm-10">{{myData.PROFILE.MyWork}}</div>
+						</div>
+						<div class ="row">
+							<div class="col-sm-2 text-muted">Education: </div> 
+							<div class="col-sm-10">{{myData.PROFILE.Education}}</div>
+						</div>
+						<div class ="row">
+							<div class="col-sm-2 text-muted">Email: </div> 
+							<div class="col-sm-10">{{myData.PROFILE.Contact}}</div>
+						</div>
+						<div class ="row">
+							<div class="col-sm-2 text-muted">Phone: </div> 
+							<div class="col-sm-10">{{myData.PROFILE.Phone}}</div>
+						</div>
+						<div class ="row">
+							<div class="col-sm-2 text-muted">Nationality: </div> 
+							<div class="col-sm-10">{{myData.PROFILE.Country}}</div>
+						</div>
 					</div>
+					</br></br>
 				</div>
 				<div class="clearfix"></div>
 				
+				<div style="width: 100%; height:20px; background-color: #c0c0c0; color:#c0c0c0;magin-top:6px; margin-bottom:6px"> </div>
 				<div class="row container" style="margin-left:20px;">
 					<h3 class="col-sm-12"><strong>Background</strong></h3>
 				</div>
-				</br></br>
+				</br>
 				<div class="row container" style="margin-left:20px;">
 					<image style="display: inline; width: 30px;height: 30px; margin-left: 60px;" src="{{myData.IMAGES.summary}}">
 					<span><strong>Summary</strong></span>
