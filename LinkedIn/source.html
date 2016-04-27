@@ -1,16 +1,33 @@
 <!DOCTYPE html>
-<head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<script src="js/angular.min.js"></script>
-	<script src="js/myScript.js"></script>
-</head>
-<body ng-app="myApp">
-	<div ng-controller="myController">
-		<div class="row">
-		<label id ="Headline" class="col-md-12">{{myData.PROFILE.Headline}}</label>
-		</div>
-	</div>
-</body>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>CV</title>
+		<script src="js/angular.min.js"></script>
+		<script src="js/myScript.js"></script>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+	</head>
+	<body style="background-color: #c0c0c0">
+		<div ng-app="myApp" style="width: 960px; margin: 50px auto; background-color: white">
+			<div ng-controller="myController">
+				<div class="row container" >
+					<h5 class=" col-sm-12">{{myData.PROFILE.Headline}}</h5>
+				</div>
+				<div class="row container">
+					<image class="col-sm-3" src="{{myData.IMAGES.Avatar}}">
+					<div class="col-sm-9" style="margin-left: 10px margin-top:10px ;">
+						<h3> <strong>{{myData.PROFILE.MyName}}</strong></h3>
+						<div>Job: {{myData.PROFILE.MyWork}}</div>
+						<div>Email: {{myData.PROFILE.Contact}}</div>
+						<div>Nationality: {{myData.PROFILE.MyWork}}</div>
+						<div>Country: {{myData.PROFILE.Country}}</div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+				<
+				
+			</div>
+		
+	</body>
+</html>

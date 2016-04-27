@@ -1,8 +1,7 @@
-angular.module('myApp',[]).controller('myController',function($scope,$http)
-	{
-		$http.get('dataCV.json').success(function(response)
-		{
-			$scope.myData=response;
-		});
-		
-	});
+var app = angular.module('myApp', []);
+app.controller('myController', function($scope, $http) {
+  $http.get('data.json')
+  .success(function(response) {
+      $scope.myData = response;
+  });
+});
