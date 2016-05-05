@@ -7,6 +7,8 @@
 		<script src="js/myScript.js"></script>
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
+		<link href="css/xeditable.css" rel="stylesheet">
+		<script src="js/xeditable.js"></script>
 	</head>
 	<body style="background-color: #c0c0c0">
 		<div ng-app="myApp" style="width: 1000px; margin: 40px auto; background-color: white">
@@ -18,7 +20,7 @@
 				<div class="row container" style="margin-left:20px;margin-bottom:20px;">
 					<image class="col-sm-4" style ="height: 250px; width:250px;" src="{{myData.IMAGES.Avatar}}">
 					<div class="col-sm-8" style="margin-left: 10px margin-top:10px; margin-bottom=10px;">
-						<h2> <strong>{{myData.PROFILE.MyName}}</strong></h2>
+						<a href="#" editable-text="myData.PROFILE.MyName"><strong>{{myData.PROFILE.MyName|| "empty" }}</strong></a>
 						<div class ="row">
 							<div class="col-sm-2 text-muted">Job: </div>
 							<div class="col-sm-10">{{myData.PROFILE.MyWork}}</div>
