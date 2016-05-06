@@ -94,8 +94,7 @@
 					</div>
 					</br>
 					<ul style="margin-left:80px;">
-						<li><a style="color:black;" href="#" editable-text="myData.EXPERIENCE.Experience1">{{ myData.EXPERIENCE.Experience1|| "empty" }}</a></li>
-						<li><a style="color:black;" href="#" editable-text="myData.EXPERIENCE.Experience2">{{ myData.EXPERIENCE.Experience2|| "empty" }}</a></li>
+						<li ng-repeat="experience in myData.EXPERIENCE"><a style="color:black;" href="#" editable-text="experience.key">{{experience.key|| "empty" }}</a></li>
 					</ul>
 					<form class="container" style="margin-left:100px;" ng-show="hideexperience">
 						<input type="text" ng-model="experience" placeholder="experience" ng-required/>
@@ -122,8 +121,7 @@
 					
 					</br>
 					<ul style="margin-left:80px;">
-						<li><a style="color:black;" href="#" editable-text="myData.PROJECT.Project1">{{ myData.PROJECT.Project1|| "empty" }}</a></li>
-						<li><a style="color:black;" href="#" editable-text="myData.PROJECT.Project2">{{ myData.PROJECT.Project2|| "empty" }}</a></li>
+						<li ng-repeat="project in myData.PROJECT"><a style="color:black;" href="#" editable-text="project.key">{{project.key|| "empty" }}</a></li>
 					</ul>
 					<form class="container" style="margin-left:100px;" ng-show="hideproject">
 						<input type="text" ng-model="project" placeholder="project" ng-required/>
@@ -150,8 +148,7 @@
 				
 					</br>
 					<ul style="margin-left:80px;">
-						<li><a style="color:black;" href="#" editable-text="myData.SKILLS.skill1">{{ myData.SKILLS.skill1|| "empty" }}</a></li>
-						<li><a style="color:black;" href="#" editable-text="myData.SKILLS.skill2">{{ myData.SKILLS.skill2|| "empty" }}</a></li>
+						<li ng-repeat="skill in myData.SKILLS"><a style="color:black;" href="#" editable-text="skill.key">{{skill.key|| "empty" }}</a></li>
 					</ul>
 					<form class="container" style="margin-left:100px;" ng-show="hideskills">
 						<input type="text" ng-model="skills" placeholder="skill" ng-required/>
@@ -178,7 +175,7 @@
 					
 					</br>
 					<ul style="margin-left:80px;">
-						<li><a style="color:black;" href="#" editable-text="myData.EDUCATION.education1">{{myData.EDUCATION.education1|| "empty" }}</a></li>
+						<li ng-repeat="education in myData.EDUCATION"><a style="color:black;" href="#" editable-text="education.key">{{education.key|| "empty" }}</a></li>
 					</ul>
 					<form class="container" style="margin-left:100px;" ng-show="hideeducation">
 						<input type="text" ng-model="education" placeholder="education" ng-required/>

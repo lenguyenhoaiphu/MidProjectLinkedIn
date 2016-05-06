@@ -28,4 +28,35 @@ app.controller('myController', function($scope, $http) {
 	{
 		$scope.hideeducation=false;
 	};
+	
+	$scope.AddSummary=function()
+	{
+		$scope.hidesummary=false;
+		$scope.myData.SUMMARY.push({key:$scope.summary});
+		$scope.summary="";
+	};
+	$scope.AddExperience=function()
+	{
+		$scope.hideexperience=false;
+		$scope.myData.EXPERIENCE.push({key:$scope.experience});
+		$scope.experience="";
+	};
+	$scope.AddProject=function()
+	{
+		$scope.hideproject=false;
+		$scope.myData.PROJECT.push({key:$scope.project});
+		$scope.project="";
+	};
+	$scope.AddSkill=function()
+	{
+		$scope.hideskills=false;
+		$scope.myData.SKILLS.push({key:$scope.skills});
+		$scope.skills="";
+	};
+	$scope.AddEducation=function()
+	{
+		$scope.hideeducation=false;
+		$scope.myData.EDUCATION.push({key:$scope.education});
+		$scope.education="";
+	};
 });

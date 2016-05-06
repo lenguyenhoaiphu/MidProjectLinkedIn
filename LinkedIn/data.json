@@ -12,34 +12,36 @@
 	},
 
 	"SUMMARY":
-	{
-		"key":"Junior at  University of Science",
-		"key":"Studying about Software Engineering",
-		"key":"Hobies: playing games,watching movie..."
-	},
+	[
+		{"key":"Junior at  University of Science"},
+		{"key":"Studying about Software Engineering"},
+		{"key":"Hobies: playing games,watching movie..."}
+	],
+		
+
 
 	"EXPERIENCE":
-	{
-		"key":"Graduating next year",
-		"key":"Work partime in restaurant"
-	},
+	[
+		{"key":"Graduating next year"},
+		{"key":"Work partime in restaurant"}
+	],
 
 	"PROJECT":
-	{
-		"key":"MyPaint",
-		"key":"Game Caro"
-	},
+	[
+		{"key":"MyPaint"},
+		{"key":"Game Caro"}
+	],
 
 	"SKILLS":
-	{
-		"key":"Programing language: C, C++, C#, Java, HTMT CSS",
-		"key":"Teamwork, softskills, English"
-	},
+	[
+		{"key":"Programing language: C, C++, C#, Java, HTMT CSS"},
+		{"key":"Teamwork, softskills, English"}
+	],
 
 	"EDUCATION":
-	{
-		"key":"University of Sciences, Ho Chi Minh City"
-	},
+	[
+		{"key":"University of Sciences, Ho Chi Minh City"}
+	],
 
 	"IMAGES":
 	{
