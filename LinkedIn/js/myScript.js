@@ -8,4 +8,24 @@ app.controller('myController', function($scope, $http) {
   .success(function(response) {
       $scope.myData = response;
   });
+  $scope.CancelFormSummary=function()
+	{
+		$scope.hidesummary=false;
+	};
+	$scope.CancelFormExperience=function()
+	{
+		$scope.hideexperience=false;
+	};
+	$scope.CancelFormProject=function()
+	{
+		$scope.hideproject=false;
+	};
+	$scope.CancelFormSkill=function()
+	{
+		$scope.hideskills=false;
+	};
+	$scope.CancelFormEducation=function()
+	{
+		$scope.hideeducation=false;
+	};
 });

@@ -53,65 +53,139 @@
 				</div>
 				</br>
 				<div class="row container" style="margin-left:20px;">
-					<image style="display: inline; width: 30px;height: 30px; margin-left: 60px;" src="{{myData.IMAGES.summary}}">
-					<span><strong>Summary</strong></span>
-					</br></br>
+					
+					<div class="row">
+						<div class="col-sm-3">
+							<image style="display: inline; width: 30px;height: 30px; margin-left: 60px" src="{{myData.IMAGES.summary}}">
+							<span><strong>Summary</strong></span>
+						</div>
+						<div class="col-sm-2 col-sm-offset-5">
+							<button type="button" class="btn btn-default" ng-click="hidesummary=true">
+							Add
+							</button>
+						</div>
+					</div>
+					</br>
 					<ul style="margin-left:80px;">
-						<li><a style="color:black;" href="#" editable-text="myData.SUMMARY.Summary1">{{ myData.SUMMARY.Summary1|| "empty" }}</a></li>
-						<li><a style="color:black;" href="#" editable-text="myData.SUMMARY.Summary2">{{ myData.SUMMARY.Summary2|| "empty" }}</a></li>
-						<li><a style="color:black;" href="#" editable-text="myData.SUMMARY.Summary3">{{ myData.SUMMARY.Summary3|| "empty" }}</a></li>
+						<li ng-repeat="summary in myData.SUMMARY"><a style="color:black;" href="#" editable-text="summary.key">{{summary.key|| "empty" }}</a></li>
 					</ul>
+					<form class="container" style="margin-left:100px;" ng-show="hidesummary">
+						<input type="text" ng-model="summary" placeholder="summary" ng-required/>
+						<button type="button" class="btn btn-primary" ng-click="AddSummary()">Save</button>
+						<button type="button" class="btn btn-default" ng-click="CancelFormSummary()">Cancel</button>
+					</form>
+					
 				</div>
 				<div class="clearfix"></div>
 				
 				<hr/>
 				
 				<div class="row container" style="margin-left:20px;">
-					<image style="display: inline; width: 30px;height: 30px; margin-left: 60px" src="{{myData.IMAGES.experience}}">
-					<span><strong>Experience</strong></span>
-					</br></br>
+					<div class="row">
+						<div class="col-sm-3">
+							<image style="display: inline; width: 30px;height: 30px; margin-left: 60px" src="{{myData.IMAGES.experience}}">
+							<span><strong>Experience</strong></span>
+						</div>
+						<div class="col-sm-2 col-sm-offset-5">
+							<button type="button" class="btn btn-default" ng-click="hideexperience=true">
+							Add
+							</button>
+						</div>
+					</div>
+					</br>
 					<ul style="margin-left:80px;">
 						<li><a style="color:black;" href="#" editable-text="myData.EXPERIENCE.Experience1">{{ myData.EXPERIENCE.Experience1|| "empty" }}</a></li>
 						<li><a style="color:black;" href="#" editable-text="myData.EXPERIENCE.Experience2">{{ myData.EXPERIENCE.Experience2|| "empty" }}</a></li>
 					</ul>
+					<form class="container" style="margin-left:100px;" ng-show="hideexperience">
+						<input type="text" ng-model="experience" placeholder="experience" ng-required/>
+						<button type="button" class="btn btn-primary" ng-click="AddExperience()">Save</button>
+						<button type="button" class="btn btn-default" ng-click="CancelFormExperience()">Cancel</button>
+					</form>
 				</div>
 				<div class="clearfix"></div>
 				
 				<hr/>
 				
 				<div class="row container" style="margin-left:20px;">
-					<image style="display: inline; width: 30px;height: 30px; margin-left: 60px" src="{{myData.IMAGES.project}}">
-					<span><strong>Project</strong></span>
-					</br></br>
+					<div class="row">
+						<div class="col-sm-3">
+							<image style="display: inline; width: 30px;height: 30px; margin-left: 60px" src="{{myData.IMAGES.project}}">
+							<span><strong>Project</strong></span>
+						</div>
+						<div class="col-sm-2 col-sm-offset-5">
+							<button type="button" class="btn btn-default" ng-click="hideproject=true">
+							Add
+							</button>
+						</div>
+					</div>
+					
+					</br>
 					<ul style="margin-left:80px;">
 						<li><a style="color:black;" href="#" editable-text="myData.PROJECT.Project1">{{ myData.PROJECT.Project1|| "empty" }}</a></li>
 						<li><a style="color:black;" href="#" editable-text="myData.PROJECT.Project2">{{ myData.PROJECT.Project2|| "empty" }}</a></li>
 					</ul>
+					<form class="container" style="margin-left:100px;" ng-show="hideproject">
+						<input type="text" ng-model="project" placeholder="project" ng-required/>
+						<button type="button" class="btn btn-primary" ng-click="AddProject()">Save</button>
+						<button type="button" class="btn btn-default" ng-click="CancelFormProject()">Cancel</button>
+					</form>
 				</div>
 				<div class="clearfix"></div>
 				
 				<hr/>
 				
 				<div class="row container" style="margin-left:20px;">
-					<image style="display: inline; width: 30px;height: 30px; margin-left: 60px" src="{{myData.IMAGES.skill}}">
-					<span><strong>Skills</strong></span>
-					</br></br>
+					<div class="row">
+						<div class="col-sm-3">
+							<image style="display: inline; width: 30px;height: 30px; margin-left: 60px" src="{{myData.IMAGES.skill}}">
+							<span><strong>Skills</strong></span>
+						</div>
+						<div class="col-sm-2 col-sm-offset-5">
+							<button type="button" class="btn btn-default" ng-click="hideskills=true">
+							Add
+							</button>
+						</div>
+					</div>
+				
+					</br>
 					<ul style="margin-left:80px;">
 						<li><a style="color:black;" href="#" editable-text="myData.SKILLS.skill1">{{ myData.SKILLS.skill1|| "empty" }}</a></li>
 						<li><a style="color:black;" href="#" editable-text="myData.SKILLS.skill2">{{ myData.SKILLS.skill2|| "empty" }}</a></li>
 					</ul>
+					<form class="container" style="margin-left:100px;" ng-show="hideskills">
+						<input type="text" ng-model="skills" placeholder="skill" ng-required/>
+						<button type="button" class="btn btn-primary" ng-click="AddSkill()">Save</button>
+						<button type="button" class="btn btn-default" ng-click="CancelFormSkill()">Cancel</button>
+					</form>
 				</div>
 				<div class="clearfix"></div>
 				
 				<hr/>
 				
 				<div class="row container" style="margin-left:20px;">
-					<image style="display: inline; width: 30px;height: 30px; margin-left: 60px" src="{{myData.IMAGES.education}}">
-					<span><strong>Education</strong></span>
-					</br></br>
+					<div class="row">
+						<div class="col-sm-3 ">
+							<image style="display: inline; width: 30px;height: 30px; margin-left: 60px" src="{{myData.IMAGES.education}}">
+							<span><strong>Education</strong></span>
+						</div>
+						<div class="col-sm-2 col-sm-offset-5">
+							<button type="button" class="btn btn-default" ng-click="hideeducation=true">
+							Add
+							</button>
+						</div>
+					</div>
+					
+					</br>
 					<ul style="margin-left:80px;">
 						<li><a style="color:black;" href="#" editable-text="myData.EDUCATION.education1">{{myData.EDUCATION.education1|| "empty" }}</a></li>
 					</ul>
+					<form class="container" style="margin-left:100px;" ng-show="hideeducation">
+						<input type="text" ng-model="education" placeholder="education" ng-required/>
+						<button type="button" class="btn btn-primary" ng-click="AddEducation()">Save</button>
+						<button type="button" class="btn btn-default" ng-click="CancelFormEducation()">Cancel</button>
+					</form>
+					</br></br>
 				</div>
 				<div class="clearfix"></div>
 			</div>
