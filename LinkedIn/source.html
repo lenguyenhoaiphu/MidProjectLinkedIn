@@ -20,26 +20,27 @@
 				<div class="row container" style="margin-left:20px;margin-bottom:20px;">
 					<image class="col-sm-4" style ="height: 250px; width:250px;" src="{{myData.IMAGES.Avatar}}">
 					<div class="col-sm-8" style="margin-left: 10px margin-top:10px; margin-bottom=10px;">
-						<a href="#" editable-text="myData.PROFILE.MyName"><strong>{{myData.PROFILE.MyName|| "empty" }}</strong></a>
+						<a href="#" editable-text="myData.PROFILE.MyName"><span style= "font-size: 200%;color:black;"><strong>{{ myData.PROFILE.MyName || "empty" }}</strong></span></a>
+						</br></br>
 						<div class ="row">
 							<div class="col-sm-2 text-muted">Job: </div>
-							<div class="col-sm-10">{{myData.PROFILE.MyWork}}</div>
+							<a style="color:black;" href="#" editable-text="myData.PROFILE.MyWork">{{ myData.PROFILE.MyWork|| "empty" }}</a>
 						</div>
 						<div class ="row">
 							<div class="col-sm-2 text-muted">Education: </div> 
-							<div class="col-sm-10">{{myData.PROFILE.Education}}</div>
+							<a style="color:black;" href="#" editable-text="myData.PROFILE.Education">{{ myData.PROFILE.Education|| "empty" }}</a>
 						</div>
 						<div class ="row">
 							<div class="col-sm-2 text-muted">Email: </div> 
-							<div class="col-sm-10">{{myData.PROFILE.Contact}}</div>
+							<a style="color:black;" href="#" editable-text="myData.PROFILE.Contact">{{ myData.PROFILE.Contact|| "empty" }}</a>
 						</div>
 						<div class ="row">
 							<div class="col-sm-2 text-muted">Phone: </div> 
-							<div class="col-sm-10">{{myData.PROFILE.Phone}}</div>
+							<a style="color:black;" href="#" editable-text="myData.PROFILE.Phone">{{ myData.PROFILE.Phone|| "empty" }}</a>
 						</div>
 						<div class ="row">
 							<div class="col-sm-2 text-muted">Nationality: </div> 
-							<div class="col-sm-10">{{myData.PROFILE.Country}}</div>
+							<a style="color:black;" href="#" editable-text="myData.PROFILE.Country">{{ myData.PROFILE.Country|| "empty" }}</a>
 						</div>
 					</div>
 					</br></br>
@@ -56,9 +57,9 @@
 					<span><strong>Summary</strong></span>
 					</br></br>
 					<ul style="margin-left:80px;">
-						<li>{{myData.SUMMARY.Summary1}}</li>
-						<li>{{myData.SUMMARY.Summary2}}</li>
-						<li>{{myData.SUMMARY.Summary3}}</li>
+						<li><a style="color:black;" href="#" editable-text="myData.SUMMARY.Summary1">{{ myData.SUMMARY.Summary1|| "empty" }}</a></li>
+						<li><a style="color:black;" href="#" editable-text="myData.SUMMARY.Summary2">{{ myData.SUMMARY.Summary2|| "empty" }}</a></li>
+						<li><a style="color:black;" href="#" editable-text="myData.SUMMARY.Summary3">{{ myData.SUMMARY.Summary3|| "empty" }}</a></li>
 					</ul>
 				</div>
 				<div class="clearfix"></div>
@@ -70,8 +71,8 @@
 					<span><strong>Experience</strong></span>
 					</br></br>
 					<ul style="margin-left:80px;">
-						<li>{{myData.EXPERIENCE.Experience1}}</li>
-						<li>{{myData.EXPERIENCE.Experience2}}</li>
+						<li><a style="color:black;" href="#" editable-text="myData.EXPERIENCE.Experience1">{{ myData.EXPERIENCE.Experience1|| "empty" }}</a></li>
+						<li><a style="color:black;" href="#" editable-text="myData.EXPERIENCE.Experience2">{{ myData.EXPERIENCE.Experience2|| "empty" }}</a></li>
 					</ul>
 				</div>
 				<div class="clearfix"></div>
@@ -83,8 +84,8 @@
 					<span><strong>Project</strong></span>
 					</br></br>
 					<ul style="margin-left:80px;">
-						<li>{{myData.PROJECT.Project1}}</li>
-						<li>{{myData.PROJECT.Project2}}</li>
+						<li><a style="color:black;" href="#" editable-text="myData.PROJECT.Project1">{{ myData.PROJECT.Project1|| "empty" }}</a></li>
+						<li><a style="color:black;" href="#" editable-text="myData.PROJECT.Project2">{{ myData.PROJECT.Project2|| "empty" }}</a></li>
 					</ul>
 				</div>
 				<div class="clearfix"></div>
@@ -96,8 +97,8 @@
 					<span><strong>Skills</strong></span>
 					</br></br>
 					<ul style="margin-left:80px;">
-						<li>{{myData.SKILLS.skill1}}</li>
-						<li>{{myData.SKILLS.skill2}}</li>
+						<li><a style="color:black;" href="#" editable-text="myData.SKILLS.skill1">{{ myData.SKILLS.skill1|| "empty" }}</a></li>
+						<li><a style="color:black;" href="#" editable-text="myData.SKILLS.skill2">{{ myData.SKILLS.skill2|| "empty" }}</a></li>
 					</ul>
 				</div>
 				<div class="clearfix"></div>
@@ -109,7 +110,7 @@
 					<span><strong>Education</strong></span>
 					</br></br>
 					<ul style="margin-left:80px;">
-						<li>{{myData.EDUCATION.education1}}</li>
+						<li><a style="color:black;" href="#" editable-text="myData.EDUCATION.education1">{{myData.EDUCATION.education1|| "empty" }}</a></li>
 					</ul>
 				</div>
 				<div class="clearfix"></div>
