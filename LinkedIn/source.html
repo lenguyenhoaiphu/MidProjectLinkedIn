@@ -13,14 +13,20 @@
 	<body style="background-color: #c0c0c0">
 		<div ng-app="myApp" style="width: 1000px; margin: 40px auto; background-color: white">
 			<div ng-controller="myController">
-				<div class="row container" >
-					<h3 style="background-color: #808080;color:	#00FF00; width: 1000px;" class="col-sm-12 text-center">{{myData.PROFILE.Headline}}</h5>
+				<div class="container" >
+					<div class="row" style="background-color: #808080; font-size:20px; width:1000px">
+						<div class="col-sm-4"></div>
+						<a class="col-sm-4" style="text-align:center; color:#00FF00" href="#" editable-text="myData.PROFILE.Headline"  e-form="btnHeadline" >{{myData.PROFILE.Headline|| "empty" }}</a>
+						<div class="col-sm-4">
+							<img src="images/edit.png" class="btn btn-default" ng-click="btnHeadline.$show()" ng-hide="btnHeadline.$visible"/>
+						</div>
+					</div>
 				</div>
 				</br></br>
 				<div class="row container" style="margin-left:20px;margin-bottom:20px;">
 					<image class="col-sm-4" style ="height: 250px; width:250px;" src="{{myData.IMAGES.Avatar}}">
 					<div class="col-sm-8" style="margin-left: 10px margin-top:10px; margin-bottom=10px;">
-						<a href="#" editable-text="myData.PROFILE.MyName"><span style= "font-size: 200%;color:black;"><strong>{{ myData.PROFILE.MyName || "empty" }}</strong></span></a>
+						<a href="#" editable-text="myData.PROFILE.MyName" ><span style= "font-size: 200%;color:black;"><strong>{{ myData.PROFILE.MyName || "empty" }}</strong></span></a>
 						</br></br>
 						<div class ="row">
 							<div class="col-sm-2 text-muted">Job: </div>
@@ -87,7 +93,7 @@
 							<span><strong>Experience</strong></span>
 						</div>
 						<div class="col-sm-2 col-sm-offset-5">
-							<button type="button" class="btn btn-default" ng-click="hideexperience=true">
+							<button type="button" class="btn btn-default" ng-click="hideexperience=true ">
 							Add
 							</button>
 						</div>
