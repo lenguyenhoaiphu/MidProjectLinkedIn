@@ -9,8 +9,8 @@
 		<link href="css/style.css" rel="stylesheet">
 		<link href="css/xeditable.css" rel="stylesheet">
 		<script src="js/xeditable.js"></script>
-		<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
-		<script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
+		<script src="js/firebase.js"></script>
+		<script src="js/angularfire.min.js"></script>
 	</head>
 	<body style="background-color: #c0c0c0">
 		<div ng-app="myApp" style="width: 1000px; margin: 40px auto; background-color: white">
@@ -18,7 +18,7 @@
 				<div class="container" >
 					<div class="row" style="background-color: #808080; font-size:20px; width:1000px">
 						<div class="col-sm-4"></div>
-						<a class="col-sm-4" style="text-align:center; color:#00FF00" href="#" editable-text="myData.PROFILE.Headline"  e-form="btnHeadline" >{{myData.PROFILE.Headline|| "empty" }}</a>
+						<a class="col-sm-4" style="text-align:center; color:#00FF00" href="#" editable-text="profile.Headline"  e-form="btnHeadline" >{{profile.Headline|| "empty" }}</a>
 						<div class="col-sm-4">
 							<img src="images/edit.png" class="btn btn-default" ng-click="btnHeadline.$show()" ng-hide="btnHeadline.$visible"/>
 						</div>
@@ -26,29 +26,29 @@
 				</div>
 				</br></br>
 				<div class="row container" style="margin-left:20px;margin-bottom:20px;">
-					<image class="col-sm-4" style ="height: 250px; width:250px;" src="{{myData.IMAGES.Avatar}}">
+					<image class="col-sm-4" style ="height: 250px; width:250px;" src="{{images.Avatar}}">
 					<div class="col-sm-8" style="margin-left: 10px margin-top:10px; margin-bottom=10px;">
-						<a href="#" editable-text="myData.PROFILE.MyName" ><span style= "font-size: 200%;color:black;"><strong>{{ myData.PROFILE.MyName || "empty" }}</strong></span></a>
+						<a href="#" editable-text="profile.MyName" ><span style= "font-size: 200%;color:black;"><strong>{{ profile.MyName || "empty" }}</strong></span></a>
 						</br></br>
 						<div class ="row">
 							<div class="col-sm-2 text-muted">Job: </div>
-							<a style="color:black;" href="#" editable-text="myData.PROFILE.MyWork">{{ myData.PROFILE.MyWork|| "empty" }}</a>
+							<a style="color:black;" href="#" editable-text="profile.MyWork">{{ profile.MyWork|| "empty" }}</a>
 						</div>
 						<div class ="row">
 							<div class="col-sm-2 text-muted">Education: </div> 
-							<a style="color:black;" href="#" editable-text="myData.PROFILE.Education">{{ myData.PROFILE.Education|| "empty" }}</a>
+							<a style="color:black;" href="#" editable-text="profile.Education">{{ profile.Education|| "empty" }}</a>
 						</div>
 						<div class ="row">
 							<div class="col-sm-2 text-muted">Email: </div> 
-							<a style="color:black;" href="#" editable-text="myData.PROFILE.Contact">{{ myData.PROFILE.Contact|| "empty" }}</a>
+							<a style="color:black;" href="#" editable-text="profile.Contact">{{ profile.Contact|| "empty" }}</a>
 						</div>
 						<div class ="row">
 							<div class="col-sm-2 text-muted">Phone: </div> 
-							<a style="color:black;" href="#" editable-text="myData.PROFILE.Phone">{{ myData.PROFILE.Phone|| "empty" }}</a>
+							<a style="color:black;" href="#" editable-text="profile.Phone">{{ profile.Phone|| "empty" }}</a>
 						</div>
 						<div class ="row">
 							<div class="col-sm-2 text-muted">Nationality: </div> 
-							<a style="color:black;" href="#" editable-text="myData.PROFILE.Country">{{ myData.PROFILE.Country|| "empty" }}</a>
+							<a style="color:black;" href="#" editable-text="profile.Country">{{ profile.Country|| "empty" }}</a>
 						</div>
 					</div>
 					</br></br>
@@ -64,7 +64,7 @@
 					
 					<div class="row">
 						<div class="col-sm-3">
-							<image style="display: inline; width: 30px;height: 30px; margin-left: 60px" src="{{myData.IMAGES.summary}}">
+							<image style="display: inline; width: 30px;height: 30px; margin-left: 60px" src="{{images.summary}}">
 							<span><strong>Summary</strong></span>
 						</div>
 						<div class="col-sm-2 col-sm-offset-5">
@@ -75,10 +75,10 @@
 					</div>
 					</br>
 					<ul style="margin-left:80px;">
-						<li ng-repeat="summary in myData.SUMMARY"><a style="color:black;" href="#" editable-text="summary.key">{{summary.key|| "empty" }}</a></li>
+						<li ng-repeat="value in summary"><a style="color:black;" href="#" editable-text="value.key">{{value.key|| "empty" }}</a></li>
 					</ul>
 					<form class="container" style="margin-left:100px;" ng-show="hidesummary">
-						<input type="text" ng-model="summary" placeholder="summary" ng-required/>
+						<input type="text" ng-model="textsummary" placeholder="summary" ng-required/>
 						<button type="button" class="btn btn-primary" ng-click="AddSummary()">Save</button>
 						<button type="button" class="btn btn-default" ng-click="CancelFormSummary()">Cancel</button>
 					</form>
@@ -91,7 +91,7 @@
 				<div class="row container" style="margin-left:20px;">
 					<div class="row">
 						<div class="col-sm-3">
-							<image style="display: inline; width: 30px;height: 30px; margin-left: 60px" src="{{myData.IMAGES.experience}}">
+							<image style="display: inline; width: 30px;height: 30px; margin-left: 60px" src="{{images.experience}}">
 							<span><strong>Experience</strong></span>
 						</div>
 						<div class="col-sm-2 col-sm-offset-5">
@@ -102,10 +102,10 @@
 					</div>
 					</br>
 					<ul style="margin-left:80px;">
-						<li ng-repeat="experience in myData.EXPERIENCE"><a style="color:black;" href="#" editable-text="experience.key">{{experience.key|| "empty" }}</a></li>
+						<li ng-repeat="value in experience"><a style="color:black;" href="#" editable-text="value.key">{{value.key|| "empty" }}</a></li>
 					</ul>
 					<form class="container" style="margin-left:100px;" ng-show="hideexperience">
-						<input type="text" ng-model="experience" placeholder="experience" ng-required/>
+						<input type="text" ng-model="textexperience" placeholder="experience" ng-required/>
 						<button type="button" class="btn btn-primary" ng-click="AddExperience()">Save</button>
 						<button type="button" class="btn btn-default" ng-click="CancelFormExperience()">Cancel</button>
 					</form>
@@ -117,7 +117,7 @@
 				<div class="row container" style="margin-left:20px;">
 					<div class="row">
 						<div class="col-sm-3">
-							<image style="display: inline; width: 30px;height: 30px; margin-left: 60px" src="{{myData.IMAGES.project}}">
+							<image style="display: inline; width: 30px;height: 30px; margin-left: 60px" src="{{images.project}}">
 							<span><strong>Project</strong></span>
 						</div>
 						<div class="col-sm-2 col-sm-offset-5">
@@ -129,10 +129,10 @@
 					
 					</br>
 					<ul style="margin-left:80px;">
-						<li ng-repeat="project in myData.PROJECT"><a style="color:black;" href="#" editable-text="project.key">{{project.key|| "empty" }}</a></li>
+						<li ng-repeat="value in project"><a style="color:black;" href="#" editable-text="value.key">{{value.key|| "empty" }}</a></li>
 					</ul>
 					<form class="container" style="margin-left:100px;" ng-show="hideproject">
-						<input type="text" ng-model="project" placeholder="project" ng-required/>
+						<input type="text" ng-model="textproject" placeholder="project" ng-required/>
 						<button type="button" class="btn btn-primary" ng-click="AddProject()">Save</button>
 						<button type="button" class="btn btn-default" ng-click="CancelFormProject()">Cancel</button>
 					</form>
@@ -144,7 +144,7 @@
 				<div class="row container" style="margin-left:20px;">
 					<div class="row">
 						<div class="col-sm-3">
-							<image style="display: inline; width: 30px;height: 30px; margin-left: 60px" src="{{myData.IMAGES.skill}}">
+							<image style="display: inline; width: 30px;height: 30px; margin-left: 60px" src="{{images.skill}}">
 							<span><strong>Skills</strong></span>
 						</div>
 						<div class="col-sm-2 col-sm-offset-5">
@@ -156,10 +156,10 @@
 				
 					</br>
 					<ul style="margin-left:80px;">
-						<li ng-repeat="skill in myData.SKILLS"><a style="color:black;" href="#" editable-text="skill.key">{{skill.key|| "empty" }}</a></li>
+						<li ng-repeat="value in skills"><a style="color:black;" href="#" editable-text="value.key">{{value.key|| "empty" }}</a></li>
 					</ul>
 					<form class="container" style="margin-left:100px;" ng-show="hideskills">
-						<input type="text" ng-model="skills" placeholder="skill" ng-required/>
+						<input type="text" ng-model="textskills" placeholder="skill" ng-required/>
 						<button type="button" class="btn btn-primary" ng-click="AddSkill()">Save</button>
 						<button type="button" class="btn btn-default" ng-click="CancelFormSkill()">Cancel</button>
 					</form>
@@ -171,7 +171,7 @@
 				<div class="row container" style="margin-left:20px;">
 					<div class="row">
 						<div class="col-sm-3 ">
-							<image style="display: inline; width: 30px;height: 30px; margin-left: 60px" src="{{myData.IMAGES.education}}">
+							<image style="display: inline; width: 30px;height: 30px; margin-left: 60px" src="{{images.education}}">
 							<span><strong>Education</strong></span>
 						</div>
 						<div class="col-sm-2 col-sm-offset-5">
@@ -183,10 +183,10 @@
 					
 					</br>
 					<ul style="margin-left:80px;">
-						<li ng-repeat="education in myData.EDUCATION"><a style="color:black;" href="#" editable-text="education.key">{{education.key|| "empty" }}</a></li>
+						<li ng-repeat="value in education"><a style="color:black;" href="#" editable-text="value.key">{{value.key|| "empty" }}</a></li>
 					</ul>
 					<form class="container" style="margin-left:100px;" ng-show="hideeducation">
-						<input type="text" ng-model="education" placeholder="education" ng-required/>
+						<input type="text" ng-model="texteducation" placeholder="education" ng-required/>
 						<button type="button" class="btn btn-primary" ng-click="AddEducation()">Save</button>
 						<button type="button" class="btn btn-default" ng-click="CancelFormEducation()">Cancel</button>
 					</form>
